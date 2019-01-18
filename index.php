@@ -29,7 +29,7 @@ $f3->route('GET /', function() {
 //Route for animal type
 
 $f3->route('GET /@animal', function($f3, $params) {
-    $validAnimals = ['chicken','dog','cat'];
+    $validAnimals = ['chicken','dog','cat', 'cow', 'pig'];
     $animal = $params['animal'];
     if(!in_array($params['animal'], $validAnimals)){
         echo "<h3>I do not know that animal </h3>";
@@ -39,6 +39,10 @@ $f3->route('GET /@animal', function($f3, $params) {
                 $sounds = "cluck!";break;
             case 'dog':
                 $sounds = "woof!";break;
+            case 'cow':
+                $sounds = "moo!";break;
+            case 'pig':
+                $sounds = "oink!";break;
             case 'cat':
                 $sounds = "meow!";
         }
