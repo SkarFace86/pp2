@@ -26,8 +26,12 @@ $f3->route('GET /', function() {
     echo "<a href='order'>Order a Pet</a>";
 });
 
-//Route for animal type
+$f3->route('GET /order', function() {
+    $view = new View();
+    echo $view->render('views/form1.html');
+});
 
+//Route for animal type
 $f3->route('GET /@animal', function($f3, $params) {
     $validAnimals = ['chicken','dog','cat', 'cow', 'pig'];
     $animal = $params['animal'];
