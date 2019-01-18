@@ -1,0 +1,12 @@
+{
+  "name":"bskargre/it328/pp2",
+  "authors": [
+    {
+      "name": "Brandon Skar",
+      "email": "bransk01@yahoo.com"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
