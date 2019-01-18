@@ -36,7 +36,7 @@ $f3->route('GET /@animal', function($f3, $params) {
     $validAnimals = ['chicken','dog','cat', 'cow', 'pig'];
     $animal = $params['animal'];
     if(!in_array($params['animal'], $validAnimals)){
-        echo "<h3>I do not know that animal </h3>";
+        $f3 -> error(404);
     }else{
         switch($animal){
             case 'chicken':
@@ -52,8 +52,6 @@ $f3->route('GET /@animal', function($f3, $params) {
         }
         echo "<h3>The $animal says $sounds</h3>";
     }
-    /*$view = new View();
-    echo $view->render('views/.html');*/
 });
 
 //Run fat-free
