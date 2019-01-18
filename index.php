@@ -28,6 +28,7 @@ $f3->route('GET /', function() {
 });
 
 $f3->route('GET /order', function() {
+    $_SESSION['animal'] = $_POST['animal'];
     $view = new View();
     echo $view->render('views/form1.html');
 });
